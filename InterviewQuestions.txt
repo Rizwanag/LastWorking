@@ -1,0 +1,206 @@
+﻿how a war file communicate ?
+how to resolve classNotFounnd exception ?
+
+
+autowire has 4 type
+byType, byName, contrutor, none
+
+<bean name="customerService" class="
+
+
+sGiven ArrayList and LinkedList which one would you choose?
+Can we use a HashMap in a multi-threaded program?  
+Given StringBuffer and StringBuilder, which one would you choose in your program?  
+
+Core Java
+Difference between JAR,WAR and EAR?
+Map implementation. 
+Thread Safe collections. 
+Performance impact and how to make the collection as thread safe.
+Difference between StringBuffer and String Builder. Why we use it
+Multithreading .
+How we have used in our project.
+Difference between runnable and callable.
+What is future object.
+Difference between WAIT and SLEEP
+Can we call start method twice? What will happen if we do so (THREAD)
+What is the use private constructor?
+In a try-catch-finally block if there is a return statement inside the try block will the finally block will still get executed?
+What is Garbage Collector and why is it used?
+What is Java Executor Framework?
+What is the difference between comparable and comparator?
+What is a Deadlock and how to prevent it?
+Which unit testing framework you have used?
+How do you write a unit test case for throwing an Exception?
+If inserting new key same as existing key in Hashmap , what will happen
+How to generate PDF/Excel from java
+hashmap vs hash table
+serialization
+final String a = a.get()//some operation
+override a method in interface
+
+JSP
+JSP directives
+JSP vs JSF
+
+Jquery
+How to use multiple version of JQuery on same page
+
+Servlets
+Java Servlet lifecycle .
+Difference between get and Post and how it is handled in server side.
+ 
+JDBC
+How JDBC works.
+How we create a DB connection in Production environment. Where and how do we specify user name and password.
+
+Logs
+Logging mechanism. I said it's log4j we have used.
+What are the different logging specifiers and where we specify the same. 
+
+Maven
+Maven...Why we use maven and what is the difference between Maven and Ant.
+Can we call ant scripts from Maven and how do we used maven in our project.
+Where we configure the Maven setting and commands to use the maven.
+Clean install and install difference
+Where do we get jars in Maven(.m2 repo)
+
+Spring 
+Benefits of Spring framework.
+What is IOC
+How it is implemented generally and project specific?
+Will ask for Spring Transaction Management :- Since I have not worked on this , So I said I don't have any idea on the same.
+Spring Security :- Since I have not worked on this , So I said I don't have any idea on the same.
+What is Dependency Injection?
+Between Setter Injection and Constructor Injection which one would you prefer and why?
+What is the difference between Singleton and Prototype bean scope?
+What is JDBCTemplate?
+How do you establish connection from Spring to Hibernate?
+Dependency Injection
+
+Hibernate
+Benefits of using Hibernate?
+Most important file in Hibernate ? It's Hibernate Configuration file.
+How we have used hibernate in our Project. It's annotation based or XML based.
+How many types of caching available in hibernate?
+What is the attribute you need to specify for using annotations in hibernate?
+What are the 2 key elements while using hibernate?
+SessionFactory use
+JPA?
+
+Database
+What is difference between Views and Tables.
+Why we use groupby?
+What are the features I have used in DB and then few questions on those like why we create index and all.
+How can we call java code from Stored Proc... I was also not aware of. There is a concept called as Java Stored Procedure using which we can invoke it.
+DDL vs DML ?
+What is benefit of JNDI lookup over JDBC ?
+Difference between Inner Join and Outer Join?
+What is self-join?
+Fetch first 10 records from a TABLE < SQL statement >?
+Difference between UNION and UNION ALL?
+What are the DB features used in your application ?<SP /Package/trigger>
+Truncate is DDL or DML?
+Create trigger DDL or DML
+
+WebServices
+Difference between Rest and SOAP
+How we have used in our Project
+What is WSDL?
+How to create a WebService...Step wise
+SOAP Security.
+In and Out of web services they will ask.
+REST framework u implemented Jersey ?
+How client created for REST WS?
+PDF format supported by REST?
+Top down and bottom up approach
+how to send userid and password to authenticate via SOAP?
+Jaxb?
+jaxws vs axis?
+What is the difference between a top-down web service and a bottom-up web service?
+
+Agile
+Agile / scrum
+
+General
+How do you manage performance issue of your web application in production environment?
+Design pattern used in your application ?Implementation of  singleton design pattern ?Factory pattern ?
+Where to put Business Logic? App layer or data layer  explain?
+UI Frameworks 
+JSON 
+How in spring webservice JSON is passed as input
+how do you get an attribute in xslt?
+how dom parser works?
+dom vs sax
+
+Design patterns
+Which all you know
+Singleton
+MVC
+TemplateMethodPattern
+
+Junit
+Used mocking?
+Mockito and Easymock related
+
+Please find below UI / Angular Questions.
+
+•	JQuery     
+o	Methods used in Jquery
+
+•	Angular 4
+o	Template-driven forms
+o	Reactive forms
+o	Different modules used in Angular 4
+o	Json web token
+o	The Dependency Injection
+o	Security
+o	Performance improvement  
+o	Build and Deployment
+
+•	AngularJS - Directive (link, custom directives, restrict types)
+o	What is a Controller?
+o	What is a component?
+o	Service / Factory differences?, which is advisable and why?
+o	$scope / $watch and inbuilt angular directives.
+o	Digest cycle
+
+•	Bootstrap           
+
+•	JavaScript – Closures, Design Pattern, Promise, Differed, Prototype Chaining, OOPS Concept, Arrow Function, Anonymous Function, how is anonymous function called, how to access all elements in javascript, what is the syntax for in javascript   
+o	Different  type of JavaScript minifier used
+     
+•	HTML
+o	Html 5 validators
+o	What are new things available in HTML5 from HTML 4
+o	Can you design a layout if a screenshot is provided
+
+•	CSS + SASS/LESS/STYLUS
+o	Differences between sass and css
+o	Mixins is sass ?
+o	Responsive designs using sass
+o	Css3 vs css2
+o	In css, did you use any preprocessor
+o	Advantages of css pre-processors
+
+•	Responsive Design
+o	Have to make a page Responsive
+
+•	Difference between Angular 1 and Angular 2
+o	Major differences between angular 1 and angular 2?
+o	AOT concept of angular 2 and 4
+o	What are Observables? How to use them?
+o	What are inbuilt directives in angular 2/4?
+o	Ng-if ,ng-for?
+
+•	Jasime TDD (Unit Testing)
+o	(Did you use any Testing Tool)
+
+
+
+They will more concentrate on Angular 4, HTML, CSS and Stylus as they work mostly in these areas.
+
+Also if you don't know any answers just tell them that you have not worked on this technology. That will not cause any issue.
+Try to keep your answers precise and they will also say the same before starting of the interview.
+
+They will ask you to rate yourself per technology. Please rate yourself accordingly as their expectations will be set based on that.

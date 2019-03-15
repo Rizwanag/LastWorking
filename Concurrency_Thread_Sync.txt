@@ -1,0 +1,113 @@
+﻿JAVA NOTES
+
+Threads and Multithreading.
+
+	a) The Class java.lang.Threads provides a method which can create and controll threads.(easy and straight)
+	b) The Interface java.lang.Runnable is implement by a class that runs a thread.( preffered)
+
+1. The life cycle of the threads.
+	* The thread is launched by JVM.
+	* creating and lunching threads is sometimes is called as spawning a thread.
+	* 
+	
+	1.a) using Thread Class - > implements Runnable.
+	The methods are:
+		Thread currentThread(); return reference of executing thread.
+		boolean isDeamon(); return true if Deomon thread else false.
+		int getPriority(); returns priority.
+		void interrept(); interupt current executing thread.
+		boolean isAline(); return true if thread started + not dead.
+		void join(long milisecong); waits to thread object to terminate ; can optionally use specific time to wait.//next statement will not execute untill joined thread is terminated.
+		void run; provide implementation as thread run() is empty and doesn't to anything.
+		void start;
+		void sleep;
+		void yield(); pause this thread so that other execute.
+		
+	start() - activate thread -> if JVM is ready to give processing time -> then its call run() 
+	you dont call run() to start a thread.
+		class TestThread extends Thread
+		public void run(){ something; }
+		}
+		...
+		TestThread thread = new TestThread();
+		thread.start();
+	
+	1.b) Using Runnable interface. ( allows to subclass other class as extend can be only one interface)
+		class TestThread implement Runnable{
+		public void run(){ something; }
+		}
+		...
+		Thread thread = new thread(new TestThread());
+		thread.start();
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Serialization:
+
+Java object can write into a file for future access, this is called Serialization. In order to do this, you have to implement the Serializableinterface, 
+and use ObjectOutputStream to write objects into a file.
+
+The writeObject method is responsible for writing the state of the object for its particular class so that the corresponding readObject method can restore it. 
+The default mechanism for saving the Object's fields can be invoked by calling out.defaultWriteObject.
+	
+Immutable Objects
+An object is considered immutable if its state cannot change after it is constructed.Immutable objects are particularly useful in concurrent applications. 
+Since they cannot change state, they cannot be corrupted by thread interference or observed in an inconsistent state.
+
+	A Strategy for Defining Immutable Objects:
+	1. Don't provide "setter" methods — methods that modify fields or objects referred to by fields.
+	2. Make all fields final and private.
+	3. Don't allow subclasses to override methods. The simplest way to do this is to declare the class as final. A more sophisticated approach is to make the constructor private and construct instances in factory methods.
+	4. If the instance fields include references to mutable objects, don't allow those objects to be changed:
+	5. Don't provide methods that modify the mutable objects.
+	6. Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, create copies, and store references to the copies. Similarly, create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Concurrency:
+
+There are two basic units of execution: processes and threads.
+ 
+Threads are sometimes called lightweight processes. Both processes and threads provide an execution environment, 
+but creating a new thread requires fewer resources than creating a new process.
+
+Threads exist within a process — every process has at least one. 
+Threads share the process's resources, including memory and open files. This makes for efficient, but potentially problematic, communication.
+
+1. An application that creates an instance of Thread must provide the code that will run in that thread. 
+	-> Provide a Runnable object. 
+	-> Subclass Thread. The Thread class itself implements Runnable, though its run method does nothing.
+	
+***The Thread class defines a number of methods useful for thread management., but is limited by the fact that your task class must be a descendant of thread. --NOT RECOMMENDED...
+
+Synchronization
+Threads communicate primarily by sharing access to fields and the objects reference fields refer to. This form of communication is extremely efficient, 
+but makes two kinds of errors possible: thread interference and memory consistency errors. The tool needed to prevent these errors is synchronization.
+
+synchronization can introduce thread contention, which occurs when two or more threads try to access the same resource simultaneously and
+ cause the Java runtime to execute one or more threads more slowly, or even suspend their execution. Starvation and livelock are forms of thread contention. 
+ 
+ The Java programming language provides two basic synchronization idioms: synchronized methods and synchronized statements. The more complex of the two, synchronized statements.
+ 
+ 1.To make a method synchronized, simply add the synchronized keyword to its declaration. Note that constructors cannot be synchronized — using the synchronized keyword.
+ 2.
+ 
+ 
+ High level concorrency
+	1.Lock interface.
+	2.Executor.
+		in large-scale applications, it makes sense to separate thread management and creation from the rest of the application. 
+		Objects that encapsulate these functions are known as executors.  The following subsections describe executors in detail.
+			* Executor Interfaces define the three executor object types.
+			* Thread Pools are the most common kind of executor implementation.
+			* Fork/Join is a framework (new in JDK 7) for taking advantage of multiple processors.
+			(new Thread(r)).start(); with -> e.execute(r);
+		Thread Pools
+			Most of the executor implementations in java.util.concurrent use thread pools, which consist of worker threads.
+			One common type of thread pool is the fixed thread pool.
+	3. Atomic Variables
+		The java.util.concurrent.atomic package defines classes that support atomic operations on single variables. 
+		All classes have get and set methods that work like reads and writes on volatile variables. 
+		That is, a set has a happens-before relationship with any subsequent get on the same variable. 
+		*) simple class, synchronization is an acceptable solution. But for a more complicated class, we might want to avoid the liveness impact of unnecessary synchronization. 
+		Replacing the int field with an AtomicInteger allows us to prevent thread interference without resorting to synchronization, as in AtomicCounter
+	
+	
+	

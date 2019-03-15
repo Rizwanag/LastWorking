@@ -1,0 +1,15 @@
+﻿Introduction to collection : A collection — sometimes called a container 
+	A collection is an object that groups multiple elements into a single unit.
+	collections are used to store, retrive, manipulate and communite the aggregate data.
+
+Streams
+
+java 7 : try with resource implement autoclosable interface( has close())
+		: suppressed exception 
+		
+A return within finally{} ignores any exception thrown in try{}. Scary! 
+
+custom warning annotaion creations
+
+Benefits of the Java Collections Framework
+1. 

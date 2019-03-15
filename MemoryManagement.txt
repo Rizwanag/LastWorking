@@ -1,0 +1,17 @@
+Java memory allocation.
+
+0.Suppose if i create a 10 objects of type Student then only 1 set of fresh memory is allocated to the methods present in class Student whereas 10 sets of fresh memory is allocated to store instance variables for 10 objects.
+
+1.When an object is created, it is always created in Heap and has global access. That means all objects can be referenced from anywhere in the application.
+
+2.Java profiling helps you monitor different JVM parameters including object creation, thread execution, method execution, and, yes, garbage collection. - VisualVM
+
+3.This is the temporary memory where variable values are stored when their methods are invoked. After the method is finished, the memory containing those values is cleared to make room for new methods.
+
+4.The garbage collection implementation lives in the JVM. Each JVM can implement garbage collection however it pleases; the only requirement is that it meets the JVM specification. Although there are many JVMs, Oracle’s HotSpot is by far the most common.
+
+5.For scenarios in which the garbage collector is negatively impacting performance, Java offers many options for tuning the garbage collector to improve its efficiency.
+
+6.Additional fine-tuning can be accomplished by changing the size of the heap or its sections and measuring garbage collection efficiency using a tool like jstat.
+
+7.Caching is a popular solution to avoid the repeated execution of expensive or frequently used code snippets. 

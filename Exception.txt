@@ -1,0 +1,11 @@
+Exception
+
+when an exception occures a object is created and hands off to runtime system. -> throwing an exception.
+
+runtime system searches for a code for handling exception and based on type picks the handler . the handler -> catch the exception.
+
+if none handler found by runtime system then program crashes.
+
+checked exception are required to specify the catch -> all exception are -> checked - Error - runtime exception(indicator + subclass).
+
+Error are external to application and hence cannot anticipate error (like error due to hardware malfunction to read a file). application can still catch this error.

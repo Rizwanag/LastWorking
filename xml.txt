@@ -1,0 +1,23 @@
+XML NOTEs
+
+the act of converting an XML document to and from an object. This conversion process is also known as XML Marshalling, or XML Serialization. 
+
+a marshaller is responsible for serializing an object (graph) to XML. In similar fashion, an unmarshaller deserializes the XML to an object graph. 
+
+----------------------------------------------------------------------------------------------------------------------
+Other General
+
+DOM: The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.
+
+For EXecl -- Apache POI library
+For PDF   -- OpenPDF library
+
+-------------------------------------------------------------------------------------------------------------------------
+while debugging check mark overlay is indicating that its(class) loaded in JVM.
+•The source files for a product are laid out in one directory "src".
+•The class files are in another directory "bin". 
+
+null is not Object or neither a type. It’s just a special value, which can be assigned to any reference type and you can type cast null to any type.
+
+---------------------------------------------------------------------------------------------------------------------------
+@ We can use == operators for reference comparison (address comparison) and .equals() method for content comparison. 

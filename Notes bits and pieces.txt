@@ -1,0 +1,53 @@
+application programmer ensures that its value should always be read from main memory and thread should not use cached value of that variable from their own stack. 
+
+Read more: http://www.java67.com/2012/08/what-is-volatile-variable-in-java-when.html#ixzz5cHH8wOSc
+
+individuals and interaction over process and tools
+2. working software over comprehensive documentations.
+3. customer collaboration over contract negotiation.
+4. responding to change over following plan.
+
+Agile is set of values and princeples -> a team become agile by making decision based out agile values and princleples.
+planning poker cards & splitting user stories of equal size.
+
+for creating D only only so as needed -> may rework in future -> this may happen as lack of experice in foreseeing...
+
+
+
+public class HashSet<> implements Set<>, clonable, java.io.serialaizable{
+static final long serialKey = 932380900-923L;
+private transient HashMap<E,Object> map;
+
+
+rest can be implemented form spring version 3. onwards
+
+chaching is done to improve performance.
+
+immutable classes are those classess whose state cannot be changed once created, if modified other object is created
+immutable classes by default are thread safe by default.
+immutable classes doesn't need external synchronization.
+
+sql injection attack can be prevented by using prepared statment.
+cross site sripting attack - java script
+
+hashmap should implement 2 method -> equals() & hashcode().
+ehcache is a java cacahe api 
+
+----------------------------------------------------------------------
+
+container is a run time environment.
+
+if(o instanceof CargoFlight){
+CargoFlight cf = (CargoFlight) o;
+cf.add1Package(1,2.5,3);
+}
+
+The object is considered the noun and the rest calls are verbs or actions you can do against that object.
+because services receive a copy of the registry from Eureka during registration.
+
+If there are 2 implementations of the interface without qulifier defiened on them then application is not build and throws error(ambigous dependency) as its ambigous to container.
+technically when you don't specity any qualifier then there is qualifier added which is @default hence leds to confusion.
+do this for solution - @Qualifier 
+or can add some custom annotation to wire bean together, like @forOne and use this same annotion with @inject.
+
+Java EE 7 tutorials.

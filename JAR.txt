@@ -1,0 +1,39 @@
+JAR
+1. JARs are executable
+	without jar we have to pass a command-line argument (com.tedneward.Hello) indicating the class whose main() method we want to launch. -> NOT USER FRINEDLY + ERROR PRONE.
+	The solution is to make the JAR file "executable" so that the Java launcher will automatically know which class to launch when executing the JAR file. 
+	All we have to do is introduce an entry into the JAR file's manifest (MANIFEST.MF in the JAR's META-INF subdirectory), like so:
+	-> Show me the entrypoint!
+	1 Main-Class: com.tedneward.jars.Hello.
+		The manifest is just a set of name-value pairs. but is strict with structure even witespace would lead to error so build tools like ANT is preffered.
+2. JARs can include dependency information
+	just have to give class-path in ant or manifest.mf 
+3. JARs can be implicitly referenced
+	The JRE is a customizable location, but it is so rarely customized within a given Java environment that it's entirely safe 
+	to assume that lib/ext is a safe place to store JARs, and that they will be implicitly available on the Java environment's CLASSPATH.
+4. JARs hold more than code.
+	if need any config file then include config files in the Ant task or the jar command-line when building a JAR.
+	jar can include other type of file like properties file.
+	package com.tedneward.jars;
+ 
+import java.util.*;
+ 
+public class SpeakEnglish implements ISpeak {
+ 
+    Properties responses = new Properties();
+    // ...
+ 
+    public SpeakEnglish() {
+     
+        try {
+            ClassLoader myCL = SpeakEnglish.class.getClassLoader();
+            responses.load(
+                myCL.getResourceAsStream(
+                    "com/tedneward/jars/responses.properties"));
+        } catch (Exception x)  {
+            x.printStackTrace();
+        }
+    }
+     
+    // ...
+}

@@ -1,0 +1,28 @@
+monolith - 
+cannot allow work independtly
+difficult to change the existing technologies.
+use same db for all feature 	
+database may become huge as application grows leading to latecy.
+scaling happenes to entire application (even some is not neccessary) leading to resource consumption.
+
+microservice -
+Domain driven ( verticle slice)
+domain - > subdomain - > dependency -> duplicate entity
+team - > each subdomain -> Agile is best used
+DB -> indepent DB -> sharing db is discouraged -> different db will helpfull for application like
+   -> curd (relational) , cunstruction database- mostly insert data customly (noSQL)
+   -> when change in one subdomain happen whice is denpendent on other then need event trigger to update ( Akka, kafta, rabbit)
+UI compostion - > server side, client side.
+
+webservies description(contract of api) -> SOAP(wsdl), REST (swagger), 
+
+gateway of api -> as client see application as single ( each microservice have to expose contract to other and can be used for CORS concerns)
+
+single authentication.
+token, cookies.
+
+scalability
+
+monitoring- health check api for microservice -> log Aggregrator(splunk)
+
+each application can be converted to(pacakage) -> container images( it will take care of encapsulating technologies used). - > automate deployment (kebernates, docker swamp)
